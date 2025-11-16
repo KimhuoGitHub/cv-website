@@ -120,6 +120,13 @@ export const skills = {
     { name: "App Store & Play Store Deployment", level: 85 },
     { name: "Firebase & Analytics", level: 80 }
   ],
+  aiTools: [
+    { name: "Claude AI", level: 90 },
+    { name: "ChatGPT", level: 88 },
+    { name: "Cursor AI", level: 85 },
+    { name: "Windsurf", level: 82 },
+    { name: "GitHub Copilot", level: 87 }
+  ],
   soft: [
     "Team Leadership & Mentoring",
     "Cross-functional Collaboration",
