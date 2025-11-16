@@ -15,14 +15,80 @@
   }
 }
 
+/* Enhanced Print Styles */
 @media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+
   .app {
-    background: white;
+    background: white !important;
   }
 
   .main-content {
     max-width: 100%;
     padding: 0;
+    margin: 0;
+  }
+
+  /* Hide download button when printing */
+  .download-section {
+    display: none !important;
+  }
+
+  /* Ensure sections don't break across pages */
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Prevent page breaks after headers */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Ensure links are visible in print */
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Don't show URLs for internal anchor links */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after,
+  a.no-print-url:after {
+    content: "";
+  }
+
+  /* Optimize spacing for print */
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    margin: 1rem 0;
+  }
+
+  /* Ensure colors are preserved */
+  .section-icon,
+  .skill-progress-fill,
+  .language-bar-fill,
+  .tech-tag,
+  .project-type {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }
-

@@ -6,16 +6,17 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Education from './components/Education';
+import Languages from './components/Languages';
 import Footer from './components/Footer';
-import { 
-  personalInfo, 
-  profile, 
-  experience, 
+import {
+  personalInfo,
+  profile,
+  experience,
   skills,
   projects,
   certifications,
   education,
-  languages 
+  languages
 } from './data/resumeData';
 import './App.css';
 
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <Header personalInfo={personalInfo} />
-      
+
       <main className="main-content">
         <Profile profile={profile} />
         <Experience experience={experience} />
@@ -31,6 +32,7 @@ function App() {
         <Projects projects={projects} />
         <Certifications certifications={certifications} />
         <Education education={education} />
+        <Languages languages={languages} />
       </main>
 
       <Footer />
