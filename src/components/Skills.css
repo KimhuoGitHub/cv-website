@@ -8,11 +8,17 @@
 
 .skills-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
+.technical-skills,
+.ai-tools {
+  grid-column: 1 / -1;
+}
+
 .technical-skills h3,
+.ai-tools h3,
 .soft-skills h3 {
   font-size: 1.25rem;
   color: #2d3748;

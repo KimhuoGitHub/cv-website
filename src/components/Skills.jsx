@@ -45,6 +45,15 @@ const Skills = ({ skills }) => {
           </div>
         </div>
 
+        <div className="ai-tools">
+          <h3>AI Development Tools</h3>
+          <div className="skills-grid">
+            {skills.aiTools.map((skill, index) => (
+              <SkillBar key={index} skill={skill} />
+            ))}
+          </div>
+        </div>
+
         <div className="soft-skills">
           <h3>Soft Skills</h3>
           <div className="soft-skills-list">
