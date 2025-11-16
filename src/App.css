@@ -1,0 +1,28 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f7fafc 0%, #edf2f7 100%);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+@media print {
+  .app {
+    background: white;
+  }
+
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
