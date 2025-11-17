@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Profile.css';
 
 const Profile = ({ profile }) => {
@@ -17,8 +18,8 @@ const Profile = ({ profile }) => {
         <div className="highlights">
           <h3>Core Competencies</h3>
           <ul>
-            {profile.highlights.map((highlight, index) => (
-              <li key={index}>{highlight}</li>
+            {profile.highlights.map((highlight) => (
+              <li key={highlight.substring(0, 50)}>{highlight}</li>
             ))}
           </ul>
         </div>
@@ -31,6 +32,14 @@ const Profile = ({ profile }) => {
       </div>
     </section>
   );
+};
+
+Profile.propTypes = {
+  profile: PropTypes.shape({
+    summary: PropTypes.string.isRequired,
+    highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
+    openTo: PropTypes.string,
+  }).isRequired,
 };
 
 export default Profile;
