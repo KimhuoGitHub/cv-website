@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Projects.css';
 
 const Projects = ({ projects }) => {
@@ -14,8 +15,8 @@ const Projects = ({ projects }) => {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project, index) => (
-          <article key={index} className="project-card">
+        {projects.map((project) => (
+          <article key={project.name} className="project-card">
             <div className="project-header">
               <h3 className="project-name">{project.name}</h3>
               {project.period && (
@@ -30,8 +31,8 @@ const Projects = ({ projects }) => {
             <p className="project-description">{project.description}</p>
 
             <div className="project-tech" role="list" aria-label="Technologies used">
-              {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="tech-tag" role="listitem">
+              {project.technologies.map((tech) => (
+                <span key={tech} className="tech-tag" role="listitem">
                   {tech}
                 </span>
               ))}
@@ -53,6 +54,19 @@ const Projects = ({ projects }) => {
       </div>
     </section>
   );
+};
+
+Projects.propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+      period: PropTypes.string,
+      type: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ),
 };
 
 export default Projects;

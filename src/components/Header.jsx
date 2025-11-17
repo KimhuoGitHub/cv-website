@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 const Header = ({ personalInfo }) => {
@@ -120,6 +121,19 @@ const Header = ({ personalInfo }) => {
 			</div>
 		</header>
 	);
+};
+
+Header.propTypes = {
+	personalInfo: PropTypes.shape({
+		name: PropTypes.string.isRequired,
+		title: PropTypes.string.isRequired,
+		subtitle: PropTypes.string.isRequired,
+		email: PropTypes.string.isRequired,
+		phone: PropTypes.string.isRequired,
+		location: PropTypes.string.isRequired,
+		availability: PropTypes.string.isRequired,
+		linkedin: PropTypes.string,
+	}).isRequired,
 };
 
 export default Header;

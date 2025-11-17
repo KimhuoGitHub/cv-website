@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Certifications.css';
 
 const Certifications = ({ certifications }) => {
@@ -14,8 +15,8 @@ const Certifications = ({ certifications }) => {
       </div>
 
       <div className="certifications-list">
-        {certifications.map((cert, index) => (
-          <article key={index} className="certification-item">
+        {certifications.map((cert) => (
+          <article key={cert.name} className="certification-item">
             <div className="cert-header">
               <h3 className="cert-name">{cert.name}</h3>
               <span className="cert-year">{cert.year || cert.period}</span>
@@ -29,6 +30,18 @@ const Certifications = ({ certifications }) => {
       </div>
     </section>
   );
+};
+
+Certifications.propTypes = {
+  certifications: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      issuer: PropTypes.string.isRequired,
+      year: PropTypes.string,
+      period: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ),
 };
 
 export default Certifications;

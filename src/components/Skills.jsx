@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Skills.css';
 
 const SkillBar = ({ skill }) => {
@@ -39,8 +40,8 @@ const Skills = ({ skills }) => {
         <div className="technical-skills">
           <h3>Technical Skills</h3>
           <div className="skills-grid">
-            {skills.technical.map((skill, index) => (
-              <SkillBar key={index} skill={skill} />
+            {skills.technical.map((skill) => (
+              <SkillBar key={skill.name} skill={skill} />
             ))}
           </div>
         </div>
@@ -48,8 +49,8 @@ const Skills = ({ skills }) => {
         <div className="ai-tools">
           <h3>AI Development Tools</h3>
           <div className="skills-grid">
-            {skills.aiTools.map((skill, index) => (
-              <SkillBar key={index} skill={skill} />
+            {skills.aiTools.map((skill) => (
+              <SkillBar key={skill.name} skill={skill} />
             ))}
           </div>
         </div>
@@ -57,8 +58,8 @@ const Skills = ({ skills }) => {
         <div className="soft-skills">
           <h3>Soft Skills</h3>
           <div className="soft-skills-list">
-            {skills.soft.map((skill, index) => (
-              <div key={index} className="soft-skill-item">
+            {skills.soft.map((skill) => (
+              <div key={skill} className="soft-skill-item">
                 <svg className="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -70,6 +71,23 @@ const Skills = ({ skills }) => {
       </div>
     </section>
   );
+};
+
+const skillPropType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  level: PropTypes.number.isRequired,
+});
+
+SkillBar.propTypes = {
+  skill: skillPropType.isRequired,
+};
+
+Skills.propTypes = {
+  skills: PropTypes.shape({
+    technical: PropTypes.arrayOf(skillPropType).isRequired,
+    aiTools: PropTypes.arrayOf(skillPropType).isRequired,
+    soft: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default Skills;

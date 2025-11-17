@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Languages.css';
 
 const Languages = ({ languages }) => {
@@ -19,8 +20,8 @@ const Languages = ({ languages }) => {
       </div>
 
       <div className="languages-list">
-        {languages.map((lang, index) => (
-          <div key={index} className="language-item">
+        {languages.map((lang) => (
+          <div key={lang.name} className="language-item">
             <div className="language-header">
               <span className="language-name">{lang.name}</span>
               <span className="language-proficiency">{lang.proficiency}</span>
@@ -53,6 +54,15 @@ const getProficiencyValue = (proficiency) => {
   };
 
   return proficiencyMap[proficiency] || 50;
+};
+
+Languages.propTypes = {
+  languages: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      proficiency: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default Languages;

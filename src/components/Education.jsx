@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Education.css';
 
 const EducationItem = ({ edu }) => {
@@ -32,12 +33,27 @@ const Education = ({ education }) => {
       </div>
 
       <div className="education-list">
-        {education.map((edu, index) => (
-          <EducationItem key={index} edu={edu} />
+        {education.map((edu) => (
+          <EducationItem key={edu.institution} edu={edu} />
         ))}
       </div>
     </section>
   );
+};
+
+const educationPropType = PropTypes.shape({
+  institution: PropTypes.string.isRequired,
+  degree: PropTypes.string.isRequired,
+  period: PropTypes.string.isRequired,
+  description: PropTypes.string,
+});
+
+EducationItem.propTypes = {
+  edu: educationPropType.isRequired,
+};
+
+Education.propTypes = {
+  education: PropTypes.arrayOf(educationPropType).isRequired,
 };
 
 export default Education;
