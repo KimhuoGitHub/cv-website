@@ -1,8 +1,8 @@
 export const personalInfo = {
 	name: 'Kimhuo Chhoeurng',
-	title: 'Senior Cross-Platform Mobile Engineer',
+	title: 'Senior Mobile App Developer',
 	subtitle:
-		'7+ Years Building Scalable Cross-Platform Apps | React Native | Expo | Flutter | iOS & Android | React & Next.js',
+		'7+ Years Building Scalable Cross-Platform Apps | React Native | Flutter | iOS & Android | React & Next.js',
 	email: 'kimhuo99@gmail.com',
 	phone: '+855 97 64 17 472',
 	location: 'Phnom Penh, Cambodia',
@@ -17,13 +17,13 @@ export const personalInfo = {
 
 export const profile = {
 	summary:
-		'Senior Mobile Developer with 7+ years of proven expertise building high-performance, scalable cross-platform applications that serve 100K+ users. Specialized in React Native and Expo with a track record of reducing load times by 35%, improving crash-free rates to 99%, and leading teams to deliver 50+ production features. Passionate about performance optimization, clean architecture, and creating exceptional user experiences.',
+		'Senior Mobile App Developer with 7+ years of proven expertise building high-performance, scalable cross-platform applications. Specialized in React Native or Flutter with a track record of reducing load times, improving crash-free rates, and leading teams to deliver production features. Passionate about performance optimization, clean architecture, and creating exceptional user experiences.',
 	highlights: [
-		'Architect and deliver production-ready mobile apps with React Native & Expo',
-		'Expert in performance optimization: reduced load times by 35%, memory usage by 25%, bundle size by 30%',
+		'Architect and deliver production-ready mobile apps with React Native or Flutter',
+		'Expert in performance optimization: reduced load times, memory usage, bundle size',
 		'Lead cross-functional teams, mentor developers, and establish coding standards',
-		'Ship bug-free releases with 99%+ crash-free rates through comprehensive testing',
-		'Proficient in modern mobile architecture, state management (Redux), and CI/CD practices',
+		'Ship bug-free releases with crash-free rates through comprehensive testing',
+		'Proficient in modern mobile architecture, and state management (Redux)',
 	],
 	openTo: 'Remote or hybrid opportunities (contract or full-time) | Immediate availability',
 };
@@ -36,11 +36,11 @@ export const experience = [
 		location: 'Battambang, Cambodia (Remote)',
 		achievements: [
 			'Leading development of high-performance features for a cross-platform real estate app using React Native + Expo',
-			'Delivered pixel-perfect, responsive UIs achieving 100% design fidelity through close collaboration with design team',
-			'Improved app performance by 40% through advanced profiling, lazy loading, and async optimization strategies',
+			'Delivered pixel-perfect, responsive UIs design through close collaboration with design team',
+			'Improved app performance through advanced profiling, lazy loading, and async optimization strategies',
 			'Architected and implemented push notifications, deep linking, and complex navigation flows across iOS/Android',
-			'Maintained 99.2% crash-free rate and reduced app bundle size by 30% through code optimization',
-			'Driving bi-weekly release cycles with zero critical production bugs and 50+ successful deployments',
+			'Maintained crash-free rate and reduced app bundle size through code optimization',
+			'Driving weekly release cycles and successful deployments',
 		],
 	},
 	{
@@ -49,11 +49,11 @@ export const experience = [
 		period: 'Jul 2018 – Aug 2024',
 		location: 'Phnom Penh, Cambodia',
 		achievements: [
-			'Led development of core mobile features used by 50K+ users, significantly improving app engagement by 45%',
-			'Architected scalable RESTful API integrations with Redux, reducing state management complexity by 60%',
-			'Achieved 35% reduction in initial load times and 25% decrease in memory footprint through performance optimization',
+			'Led development of core mobile features',
+			'Architected scalable RESTful API integrations with Redux, reducing state management complexity',
+			'Reduction in initial load times and decrease in memory footprint through performance optimization',
 			'Built pixel-perfect, smooth UIs across both mobile platforms for multiple device sizes',
-			'Released applications to iOS App Store and Google Play Store with consistent 4.5+ star ratings',
+			'Released applications to iOS App Store and Google Play Store',
 			'Implemented offline content storage and data synchronization for seamless user experience',
 			'Collaborated closely with UX Designers and Backend Architects to deliver cohesive mobile solutions',
 			'Mentored junior developers and established code review best practices across the team',
@@ -70,19 +70,19 @@ export const experience = [
 			'Integrated REST APIs for authentication, data fetching, and real-time updates',
 			'Released applications to iOS and Google Play stores, managing the full deployment pipeline',
 			'Worked on offline content storage using AsyncStorage for enhanced user experience',
-			'Collaborated with UX Designers and Backend Architects in agile development environment',
+			'Collaborated with UX Designers and Backend Architects in development environment',
 		],
 	},
 	{
-		company: 'Bight Start NGO',
+		company: 'Bright Start NGO',
 		position: 'Computer Instructor',
 		period: '2015 – 2016',
 		location: 'Battambang, Cambodia',
 		achievements: [
-			'Taught Microsoft Office suite to 100+ students across multiple classes',
-			'Planned, prepared, and delivered engaging computer lessons with 95% student satisfaction rate',
+			'Taught Microsoft Office suite to students across multiple classes',
+			'Planned, prepared, and delivered engaging computer lessons',
 			'Prepared and administered tests, examinations, and practical exercises',
-			'Provided constructive feedback on student work, improving class average scores by 25%',
+			'Provided constructive feedback on student work',
 			'Managed classroom behavior and maintained detailed attendance and performance records',
 		],
 	},
@@ -94,7 +94,7 @@ export const experience = [
 		achievements: [
 			'Managed IT systems and infrastructure for the organization',
 			'Maintained and troubleshot PCs, printers, and network equipment for 20+ staff members',
-			'Managed Wi-Fi network and resolved internet connectivity issues, reducing downtime by 80%',
+			'Managed Wi-Fi network and resolved internet connectivity issues',
 			'Kept records for staff leave and expense tracking systems',
 			'Assisted with workshop technical setup and provided support to teachers and presenters',
 		],
