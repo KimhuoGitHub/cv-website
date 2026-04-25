@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "kimhuo-dev",
     "public": "dist",
     "ignore": [
       "firebase.json",

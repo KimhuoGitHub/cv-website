@@ -1,0 +1,94 @@
+/* src/pages/Resume.css */
+
+.rn-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 16, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rn-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ← Back to Portfolio */
+.rn-nav__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #00E5CC;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(0, 229, 204, 0.25);
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.rn-nav__back:hover {
+  background: rgba(0, 229, 204, 0.1);
+}
+.rn-nav__back svg {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.rn-nav__back:hover svg {
+  transform: translateX(-3px);
+}
+
+/* KH. logo in centre */
+.rn-nav__logo {
+  font-family: 'Syne', -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #EEEEF5;
+  letter-spacing: -0.5px;
+}
+.rn-accent { color: #00E5CC; }
+
+/* Print button */
+.rn-nav__print {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #7777AA;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.rn-nav__print:hover {
+  color: #EEEEF5;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Push existing CV header down so nav doesn't overlap */
+.app .header {
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .rn-nav__inner { padding: 0 1rem; }
+  .rn-nav__logo { display: none; } /* hide centre logo on very small screens */
+  .rn-nav__back span { display: none; } /* icon only on tiny screens */
+  .rn-nav__print span { display: none; }
+}
+
+@media print {
+  .rn-nav { display: none; }
+}

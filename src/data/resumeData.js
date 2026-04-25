@@ -2,7 +2,7 @@ export const personalInfo = {
 	name: 'Kimhuo Chhoeurng',
 	title: 'Senior Cross-Platform Mobile Engineer',
 	subtitle:
-		'6+ Years Building Scalable Cross-Platform Apps | React Native | Expo | Flutter | iOS & Android | React & Next.js',
+		'7+ Years Building Scalable Cross-Platform Apps | React Native | Expo | Flutter | iOS & Android | React & Next.js',
 	email: 'kimhuo99@gmail.com',
 	phone: '+855 97 64 17 472',
 	location: 'Phnom Penh, Cambodia',
@@ -17,7 +17,7 @@ export const personalInfo = {
 
 export const profile = {
 	summary:
-		'Senior Mobile Developer with 6+ years of proven expertise building high-performance, scalable cross-platform applications that serve 100K+ users. Specialized in React Native and Expo with a track record of reducing load times by 35%, improving crash-free rates to 99%, and leading teams to deliver 50+ production features. Passionate about performance optimization, clean architecture, and creating exceptional user experiences.',
+		'Senior Mobile Developer with 7+ years of proven expertise building high-performance, scalable cross-platform applications that serve 100K+ users. Specialized in React Native and Expo with a track record of reducing load times by 35%, improving crash-free rates to 99%, and leading teams to deliver 50+ production features. Passionate about performance optimization, clean architecture, and creating exceptional user experiences.',
 	highlights: [
 		'Architect and deliver production-ready mobile apps with React Native & Expo',
 		'Expert in performance optimization: reduced load times by 35%, memory usage by 25%, bundle size by 30%',
@@ -142,8 +142,8 @@ export const skills = {
 };
 
 export const languages = [
-	{ name: 'English', proficiency: 'Professional Working Proficiency' },
-	{ name: 'Khmer', proficiency: 'Native' },
+	{ name: 'English', proficiency: 'Very Good' },
+	{ name: 'Khmer', proficiency: 'Native / Excellent' },
 	// { name: 'Korean', proficiency: 'Conversational' },
 ];
 

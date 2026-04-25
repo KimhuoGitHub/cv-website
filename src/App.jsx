@@ -1,43 +1,15 @@
-import React from 'react';
-import Header from './components/Header';
-import Profile from './components/Profile';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Certifications from './components/Certifications';
-import Education from './components/Education';
-import Languages from './components/Languages';
-import Footer from './components/Footer';
-import {
-  personalInfo,
-  profile,
-  experience,
-  skills,
-  projects,
-  certifications,
-  education,
-  languages
-} from './data/resumeData';
-import './App.css';
+// src/App.jsx  ← replace your existing App.jsx with this
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Resume from './pages/Resume';
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <Header personalInfo={personalInfo} />
-
-      <main className="main-content">
-        <Profile profile={profile} />
-        <Experience experience={experience} />
-        <Skills skills={skills} />
-        <Projects projects={projects} />
-        <Certifications certifications={certifications} />
-        <Education education={education} />
-        <Languages languages={languages} />
-      </main>
-
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
